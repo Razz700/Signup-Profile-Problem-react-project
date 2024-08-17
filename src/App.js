@@ -26,7 +26,7 @@ console.log(isLoggedIn,user,'in opne');
 //////////////////////////////////////////
   return (
     <div>
-      <Router>
+      <Router basename="/Signup-Profile-Problem-react-project">
         <Routes>
           <Route path='/' element={<Signup/>} />
           <Route path='/profile' element={<ProfilePage />} />
