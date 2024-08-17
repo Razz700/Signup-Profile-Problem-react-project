@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import {useEffect,React} from 'react'
+import './App.css'
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
+import Signup from './Pages/SignupPage'
+import ProfilePage from './Pages/ProfilePage'
+import LoginPage from './Pages/LoginPage'
+import { useDispatch, useSelector } from 'react-redux'
+import { isLoggedInCase } from './state/userAuthSlice'
+
 
 function App() {
+  const isLoggedIn=useSelector((state)=>state.userAuth.isLoggedIn);
+  const dispatch=useDispatch();
+  const user=useSelector((state)=>state.userAuth.user);
+  
+  /////////////////////////////////////
+  useEffect(()=>{
+    const checkValue=JSON.parse(localStorage.getItem('activeUser')??null);
+if (checkValue){
+  dispatch(isLoggedInCase(checkValue));
+  console.log(isLoggedIn,user);
+}
+},[]);
+console.log(isLoggedIn,user,'in opne');
+
+//////////////////////////////////////////
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Router>
+        <Routes>
+          <Route path='/' element={<Signup/>} />
+          <Route path='/profile' element={<ProfilePage />} />
+          <Route path='/login' element={<LoginPage />} />
+        </Routes>
+      </Router>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
