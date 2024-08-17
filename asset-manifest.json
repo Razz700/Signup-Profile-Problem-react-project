@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Signup-Profile-Problem-react-project/static/css/main.37fa08ac.css",
+    "main.js": "/Signup-Profile-Problem-react-project/static/js/main.80baeb30.js",
+    "index.html": "/Signup-Profile-Problem-react-project/index.html",
+    "main.37fa08ac.css.map": "/Signup-Profile-Problem-react-project/static/css/main.37fa08ac.css.map",
+    "main.80baeb30.js.map": "/Signup-Profile-Problem-react-project/static/js/main.80baeb30.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.37fa08ac.css",
+    "static/js/main.80baeb30.js"
+  ]
+}
