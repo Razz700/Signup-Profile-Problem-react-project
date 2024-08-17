@@ -10,6 +10,7 @@ export const userAuthSlice=createSlice({
         isLoggedInCase:(state,action)=>{
             state.isLoggedIn=true;
              state.user=action.payload;
+             
         },
         isLoggedOutCase:(state)=>{
             state.isLoggedIn=false;

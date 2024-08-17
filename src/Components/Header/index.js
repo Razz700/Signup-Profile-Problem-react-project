@@ -9,8 +9,7 @@ function Header() {
   const isLoggedIn=useSelector((state)=>state.userAuth.isLoggedIn);
   
 
-  useEffect(()=>{
-    console.log(isLoggedIn,'header');   
+  useEffect(()=>{  
 if (isLoggedIn){
   navigate('/profile');
 }

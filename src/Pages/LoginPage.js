@@ -20,11 +20,9 @@ function LoginPage() {
     const handleLoginbtn=(e)=>{
         e.preventDefault();
         const users=JSON.parse(localStorage.getItem('users')??'[]');
-        console.log(users,'loign');
         
         if(users.length>0){
             const activeUser=users.filter((item)=>item.email===email);
-            console.log('login',activeUser,email);
             
             if (activeUser.length>0) {
                 if(activeUser[0].password==password){

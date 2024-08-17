@@ -18,10 +18,9 @@ function App() {
     const checkValue=JSON.parse(localStorage.getItem('activeUser')??null);
 if (checkValue){
   dispatch(isLoggedInCase(checkValue));
-  console.log(isLoggedIn,user);
 }
 },[]);
-console.log(isLoggedIn,user,'in opne');
+
 
 //////////////////////////////////////////
   return (

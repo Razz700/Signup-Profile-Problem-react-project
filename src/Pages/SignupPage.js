@@ -62,7 +62,6 @@ e.preventDefault();
 if (name!=='' && email!=='' && password!=='' && confirmPassword!=='' && emailValid && passwordValid && confirmPasswordValid) {
    const users=JSON.parse(localStorage.getItem('users')??'[]');
    const userCheck=users.filter((item)=>item.email===email);
-   console.log(userCheck,'in signup check');
    
    if (userCheck.length>0) {
     setEmailPresent(true);
