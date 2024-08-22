@@ -23,7 +23,7 @@ if (checkValue){
 //////////////////////////////////////////
   return (
     <div>
-      <Router>
+      <Router basename="/Signup-Profile-Problem-react-project">
         <Routes>
           <Route path='/' element={<Signup/>} />
           <Route path='/profile' element={<ProfilePage />} />
