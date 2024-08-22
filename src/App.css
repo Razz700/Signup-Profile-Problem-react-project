@@ -50,9 +50,9 @@ form .error,form .input-errors{
 color: rgba(255, 79, 79, 1);
 padding-bottom: 12px;
 }
-form .input-errors{
+/* form .input-errors{
   font-size: smaller;
-}
+} */
 form .success{
 color:rgba(126, 205, 113, 1);
 }

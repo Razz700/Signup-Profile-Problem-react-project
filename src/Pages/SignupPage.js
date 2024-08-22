@@ -83,11 +83,11 @@ if (name!=='' && email!=='' && password!=='' && confirmPassword!=='' && emailVal
     password:password
    };
    localStorage.setItem('activeUser',JSON.stringify(activeUser));
-   dispatch(isLoggedInCase(activeUser));
-    setTimeout(()=>navigate('/profile'),2000);
+    setTimeout(()=>{navigate('/profile');
+        dispatch(isLoggedInCase(activeUser));
+    },1500);
     setSuccess(true);
     setFailed(false);
-
     setEmail('');
     setConfirmPassword('');
     setPassword('');

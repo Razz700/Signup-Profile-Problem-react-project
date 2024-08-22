@@ -31,14 +31,14 @@ function LoginPage() {
                         token:Math.floor(Math.random()*10**12)
                     }
                     localStorage.setItem('activeUser',JSON.stringify(obj));
-                    dispatch(isLoggedInCase(obj));
                     setError(false);
                     setSuccess(true);
                     setEmail('');
                     setPassword('');
                     setTimeout(()=>{
+                        dispatch(isLoggedInCase(obj));
                         navigate('/profile');
-                    },2000);
+                    },1500);
                   
                 }else{
                     setError(true);
